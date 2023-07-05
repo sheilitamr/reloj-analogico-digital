@@ -23,5 +23,19 @@ a {
 
 body {
   margin: 0;
-  background-image: url(../assets/images/sleep-cat.jpeg);
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 1000px;
+  height: 500px;
+  border: 2px solid #fff;
+}
+.digital-container {
+  font-size: 8rem;
+  color: #fff;
+  padding: 2rem;
 }
