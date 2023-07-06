@@ -39,3 +39,10 @@ body {
   color: #fff;
   padding: 2rem;
 }
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}

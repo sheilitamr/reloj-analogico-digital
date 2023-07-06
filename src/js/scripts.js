@@ -3,6 +3,35 @@ const clockHoursElement = document.getElementById('hours');
 const clockMinutesElement = document.getElementById('minutes');
 const clockSecondsElement = document.getElementById('seconds');
 
+const semanalDayElement = document.getElementById('semanal-day');
+const numberDayElement = document.getElementById('number-day');
+const monthElement = document.getElementById('month');
+const yearElement = document.getElementById('year');
+
+const daysOfWeek = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
+];
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
 const getTime = () => {
   const date = new Date();
   let hours = date.getHours();
@@ -31,3 +60,16 @@ setInterval(() => {
 }, 1000);
 
 setClockText();
+
+const getDate = () => {
+  const date = new Date();
+  const semanalDay = date.getDay();
+  const numberDay = date.getDate();
+  const year = date.getFullYear();
+  semanalDayElement.textContent = daysOfWeek[semanalDay];
+  numberDayElement.textContent = numberDay;
+  const month = date.getMonth();
+  monthElement.textContent = months[month];
+  yearElement.textContent = year;
+};
+getDate();
